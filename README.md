@@ -1,12 +1,17 @@
 # dat_Abs_listOrdM  
 ## Tipos de Datos Abstractos: Lista Ordenada  
-### Version 1.0.0  
-Renimbrado de ficheros:  
+### Version 1.0.1  
+
+Renombrado de ficheros:  
 * t3_datAbs_listM.html -> t3_datAbsListOrdM.html  
 * t3_datAbs_listM.js -> t3_datAbsListOrdM.js  
 * t3_html_controls.js -> sin cambios  
-* jscss.css -> din cambios  
-  
+* jscss.css -> sin cambios  
+
+Enlace al escript en *t3_datAbs_listOrdM.html* modificado  
+
+### Version 1.0.0  
+
 Modificacion de algunas de las funciones usadas  
   
 Añadida la Funcion de Ordenamiento:  
