@@ -268,7 +268,6 @@ function restart()
   //IdIndexInput.disabled = true;
   
   IdAddBtn.disabled = true;
-  IdAddAtBtn.disabled = true;
   IdGetIndexBtn.disabled = true;
   IdGetElementBtn.disabled = true;
   IdRemoveElementBtn.disabled = true;

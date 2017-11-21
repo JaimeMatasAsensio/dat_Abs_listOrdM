@@ -1,5 +1,10 @@
 # dat_Abs_listOrdM  
-## Tipos de Datos Abstractos: Lista Ordenada  
+## Tipos de Datos Abstractos: Lista Ordenada
+
+### Version 1.0.2
+
+Correccion de fallos en la funcion Restart(), funcion Reset().  
+
 ### Version 1.0.1  
 
 Renombrado de ficheros:  
