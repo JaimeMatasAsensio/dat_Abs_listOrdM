@@ -40,6 +40,23 @@ function place(array)
   }
 }
 
+function bubble(array)
+/*Funcion que ordena los elementos de la lista*/
+{  
+  
+  for(var i=0;i<(size(array));i++)  
+  
+  for(var j=0;j<(size(array)-i);j++){  
+  
+      if(array[j]>array[j+1]){  
+            var aux=array[j];  
+           array[j]=array[j+1];  
+           array[j+1]=aux;  
+      }  
+  }  
+  return array  
+}  
+
 function isNumber(num)
 /*Funcion para comprobar si un dato es un numero finito y entero. Si no devuelve un error.*/
 {
@@ -101,7 +118,10 @@ function add(array,element)
 {
   if(!isFull(array) && isNumber(element) && (size(array)<= listLength-1)){
     
-    array.splice((size(array)),1,element)
+    array.splice((size(array)),1,element);
+
+    bubble(array);
+
     return size(array);
     
   }else{
@@ -109,9 +129,9 @@ function add(array,element)
   }
   
 }
-
+/*
 function addAt(array,element,index)
-/*Funcion que añade un elemento en la posicion indicada de la lista. Devuelve el tamaño de la lista*/
+//Funcion que añade un elemento en la posicion indicada de la lista. Devuelve el tamaño de la lista
 {
 
   if(indexIn(index) && isNumber(element) && !isFull(array)){
@@ -125,7 +145,7 @@ function addAt(array,element,index)
     throw "Index out of the range, element isn`t a number or list is full."
   }
 }
-
+*/
 function get(array,index)
 /*Funcion que devuelve un elemento indicando su posicion en la lista, sin consumirlo*/
 {
@@ -145,6 +165,8 @@ libre al final de la misma*/
     array.splice(index,1,Number.NaN);
 
     place(array);
+
+    bubble(array);
     
     return size(array);
 
@@ -178,8 +200,9 @@ function IndexOf(array,elem)
     throw "Element isn`t a number."      
   }
 }
+/*
 function LastIndexOf(array,elem)
-/*Funcion que muestra por pantalla el indice de la ultima aparicion de un elemento en la lista*/
+//Funcion que muestra por pantalla el indice de la ultima aparicion de un elemento en la lista
 {
   elem = parseInt(elem);
   if(isNumber(elem)){
@@ -188,6 +211,8 @@ function LastIndexOf(array,elem)
     throw "Element isn`t a number."
   }  
 }
+*/
+
 function Capacity(array)
 /*Funcion que devuelve la capacidad de la lista*/
 {
@@ -253,6 +278,9 @@ function FillRandom(array,limit)
   for (var i = 0; i < listLength; i++) {
     array[i] = parseInt(Math.random()*limit + 1);
   }
+  
+  bubble(array);
+
   return size(array);
 }
 
@@ -295,10 +323,10 @@ function test()
   console.log("Extraer un elemento fuera de la lista(remove): " + error);
   }
 
-  console.log("Insertar un elemento dentro de la lista(addAt): " + addAt(list,8,2));
+  //console.log("Insertar un elemento dentro de la lista(addAt): " + addAt(list,8,2));
   console.log("Elementos en la lista(ToString(list)): " + ToString(list));
   console.log("Indice del elemento 3 (IndexOf(list,4)): " + IndexOf(list,4));
-  console.log("Indice del elemento 8 (LastIndexOf(list,8)): " + LastIndexOf(list,8));
+  //console.log("Indice del elemento 8 (LastIndexOf(list,8)): " + LastIndexOf(list,8));
   console.log("Capacidad de la lista(capacity(list)): "+ Capacity(list));
   console.log("Primer elemento a de la lista (FirstElement(list)): " + FirstElement(list));
   console.log("Primer elemento a de la lista (LastElement(list)): " + LastElement(list));

@@ -29,7 +29,8 @@ main{
 	background-image: url("../imagenes/js.gif");
 	background-repeat: no-repeat;
 	background-attachment: fixed;
-	background-position: center;	
+	background-position: center;
+	height: 100vh;	
 }
 div.apartado{
 	width: 100%;
